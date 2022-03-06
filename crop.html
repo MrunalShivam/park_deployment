@@ -1,0 +1,132 @@
+
+
+<!-- <h2><a href="/predict">CROP PREDICTION</h2> -->
+
+<h2>Crop Prediction using Machine Learning</h2>
+
+<!-- <div>
+    <form id="upload-file" method="post" enctype="multipart/form-data">
+        <label for="imageUpload" class="upload-label">
+            Choose...
+        </label>
+        <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+    </form>
+
+    <div class="image-section" style="display:none;">
+        <div class="img-preview">
+            <div id="imagePreview">
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-primary btn-lg " id="btn-predict">Predict!</button>
+        </div>
+    </div>
+
+    <div class="loader" style="display:none;"></div>
+    
+    <h3 id="result">
+    </h3>
+
+</div> -->
+<form method="post" action="/pred">
+  
+   <div class="form-group">
+    <label for="exampleInputPassword1">MDVP:Fo(Hz)</label>
+    <input type="text" class="form-control" name="Fo" placeholder="Enter Latitude">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">MDVP:Fhi(Hz)</label>
+    <input type="text" class="form-control" name="Fhi" placeholder="Enter Longitude">
+  </div>
+   <div class="form-group">
+    <label for="exampleInputPassword1">Flo</label>
+    <input type="text" class="form-control" name="Flo" placeholder="Enter ATMAX">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">per</label>
+    <input type="text" class="form-control" name="per" placeholder="Enter ATMIN">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Abs</label>
+    <input type="text" class="form-control"  name="Abs" placeholder="Enter humidity">
+  </div>
+   <div class="form-group">
+    <label for="exampleInputPassword1">RAP</label>
+    <input type="text" class="form-control" name="rap" placeholder="Enter temperature">
+  </div>
+   <div class="form-group">
+    <label for="exampleInputPassword1">ppq</label>
+    <input type="text" class="form-control" name="ppq" placeholder="Enter temperature">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">ddp</label>
+    <input type="text" class="form-control"  name="ddp" placeholder="Enter Tempmin">
+  </div>
+   <div class="form-group">
+    <label for="exampleInputPassword1">shimmer</label>
+    <input type="text" class="form-control"  name="shim" placeholder="Enter Tempmin">
+  </div>
+
+ <div class="form-group">
+    <label for="exampleInputPassword1">db</label>
+    <input type="text" class="form-control"  name="db" placeholder="Enter Tempmin">
+  </div>
+
+ <div class="form-group">
+    <label for="exampleInputPassword1">apq3</label>
+    <input type="text" class="form-control"  name="apq3" placeholder="Enter Tempmin">
+  </div>
+
+ <div class="form-group">
+    <label for="exampleInputPassword1">ap5</label>
+    <input type="text" class="form-control"  name="apq5" placeholder="Enter Tempmin">
+  </div>
+ <div class="form-group">
+    <label for="exampleInputPassword1">apq</label>
+    <input type="text" class="form-control"  name="apq" placeholder="Enter Tempmin">
+  </div>
+<div class="form-group">
+    <label for="exampleInputPassword1">dda</label>
+    <input type="text" class="form-control"  name="dda" placeholder="Enter Tempmin">
+  </div>
+<div class="form-group">
+    <label for="exampleInputPassword1">nhr</label>
+    <input type="text" class="form-control"  name="nhr" placeholder="Enter Tempmin">
+  </div>
+<div class="form-group">
+    <label for="exampleInputPassword1">hnr</label>
+    <input type="text" class="form-control"  name="hnr" placeholder="Enter Tempmin">
+  </div>
+<div class="form-group">
+    <label for="exampleInputPassword1">rpde</label>
+    <input type="text" class="form-control"  name="rpde" placeholder="Enter Tempmin">
+  </div>
+<div class="form-group">
+    <label for="exampleInputPassword1">dfa</label>
+    <input type="text" class="form-control"  name="dfa" placeholder="Enter Tempmin">
+  </div>
+<div class="form-group">
+    <label for="exampleInputPassword1">s1</label>
+    <input type="text" class="form-control"  name="s1" placeholder="Enter Tempmin">
+  </div>
+<div class="form-group">
+    <label for="exampleInputPassword1">s2</label>
+    <input type="text" class="form-control"  name="s2" placeholder="Enter Tempmin">
+  </div>
+
+<div class="form-group">
+    <label for="exampleInputPassword1">d2</label>
+    <input type="text" class="form-control"  name="d2" placeholder="Enter Tempmin">
+  </div>
+<div class="form-group">
+    <label for="exampleInputPassword1">ppe</label>
+    <input type="text" class="form-control"  name="ppe" placeholder="Enter Tempmin">
+  </div>
+  <button type="submit" name="predict" class="btn btn-primary">Predict</button>
+  <span>{{output}}</span>
+  
+</form>
+
+      <!-- <center><h1>Crop Yield Prediction Result:{{ prediction_text }}</h1></center> -->
+  
+
